@@ -1,0 +1,37 @@
+.switch {
+    display: block;
+    height: 2em;
+    width: 3.5em;
+    background-color: lightgrey;
+    border-radius: 1em;
+    position: relative;
+    transition: background-color 0.25s ease;
+
+    //Pseudo-element (SKAL indeholde CONTENT)
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0.15em;
+        left: 0.15em;
+        height: 1.7em;
+        width: 1.7em;
+        border-radius: 50%;
+        background-color: hsl(0, 0%, 46%);
+        transition: left 0.25s ease, background-color 0.25s ease;
+
+    }
+}
+
+.switch__checkbox {
+    display: none;
+}
+
+//Hvis checkbox er checked, tar vi nærmeste sibling (+) som er "switch", 
+.switch__checkbox:checked+.switch:after {
+    left: 1.65em;
+    background-color: lightgrey;
+}
+
+.switch__checkbox:checked+.switch {
+    background-color: rgb(85, 85, 85);
+}

@@ -1,0 +1,40 @@
+@use 'variables' as var;
+
+
+.travelCtn {
+    position: relative;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    border-bottom: solid 2px var.$borderColor;
+
+    &__img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        box-shadow: 0px 3px 5px var.$InteractiveHeadings;
+        color: var.$headingIMG;
+        margin-left: 1.5em;
+    }
+
+    &__heading {
+        color: var.$InteractiveHeadings;
+        font-size: 15px;
+    }
+
+    &__arrow {
+        color: var.$InteractiveHeadings;
+        margin-right: 1.5em;
+        cursor: pointer;
+    }
+
+    &:last-child .travelCtn__arrow {
+        position: absolute;
+        right: 0;
+    }
+}

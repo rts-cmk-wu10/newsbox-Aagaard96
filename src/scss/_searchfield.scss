@@ -1,0 +1,33 @@
+@use "variables" as var;
+
+.searchField {
+    position: relative;
+    border-bottom: solid 2px var.$borderColor;
+    display: flex;
+    justify-content: center;
+
+    &__input {
+        background-color: var.$borderColor;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border: none;
+        padding: 1em;
+        margin: 1em 1.5em;
+        border-radius: 3px;
+    }
+
+    &__button {
+        position: absolute;
+        border: none;
+        place-self: center;
+        right: 10%;
+        background-color: var.$borderColor;
+        color: var.$InteractiveHeadings;
+        cursor: pointer;
+    }
+
+    ::placeholder {
+        color: var.$InteractiveHeadings;
+    }
+}

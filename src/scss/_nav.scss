@@ -1,0 +1,15 @@
+@use 'variables' as var;
+
+.navList {
+    width: 100%;
+    padding: 2em 1.5em;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    border-bottom: solid 2px var.$borderColor;
+    color: var.$InteractiveHeadings;
+
+    &__itemLink {
+        color: var.$InteractiveHeadings;
+    }
+}
