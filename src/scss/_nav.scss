@@ -1,15 +1,17 @@
 @use 'variables' as var;
 
 .navList {
+    background-color: var.$white;
     width: 100%;
     padding: 2em 1.5em;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     list-style: none;
     justify-content: space-between;
-    border-bottom: solid 2px var.$borderColor;
-    color: var.$InteractiveHeadings;
+    border-bottom: solid 2px var.$fossil;
+    color: var.$drab;
 
     &__itemLink {
-        color: var.$InteractiveHeadings;
+        color: var.$drab;
     }
 }

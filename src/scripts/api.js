@@ -1,7 +1,7 @@
 const OUTPUT = document.querySelector(".output")
 const KEY = "KsMM6ssh0kdJGeDQA34rW7XrhTs8uY3m"
-
-fetch(`https://api.nytimes.com/svc/topstories/v2/food.json?api-key=${KEY}`)
+const plat = document.querySelector(".test")
+fetch(`https://api.nytimes.com/svc/topstories/v2/world.json?api-key=${KEY}`)
     .then(function (response) {
         if (response.status !== 200)
             throw new Error("fejlbesked kig her")
@@ -9,8 +9,8 @@ fetch(`https://api.nytimes.com/svc/topstories/v2/food.json?api-key=${KEY}`)
     })
 
     .then(function (data) {
-      console.log(data)
-      OUTPUT.innerText = results[0]
+        console.log(data)
+        plat.textContent= data.results[1].abstract;
     })
 
     .catch(function (error) {

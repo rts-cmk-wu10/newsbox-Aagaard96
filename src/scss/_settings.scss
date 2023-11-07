@@ -1,0 +1,45 @@
+@use 'variables' as var;
+
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    background-color: var.$ice;
+
+    &__Mainheading {
+        margin-top: 1em;
+        text-align: center;
+        color: var.$sage;
+        font-size: 35px;
+        line-height: 0.85;
+    }
+
+    &__headingSpan {
+        color: var.$fossil;
+        font-size: 24px;
+    }
+
+    &__heading {
+        text-transform: uppercase;
+    }
+
+    &__Ctn {
+        margin: 4em auto;
+        border-radius: 20px;
+        width: 350px;
+        background-color: var.$white;
+        color: var.$drab;
+    }
+
+    &__CtnForEach {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em;
+        border-bottom: solid 2px var.$fossil;
+    }
+
+    &__CtnForEach--bottom {
+        border-bottom: none;
+    }
+}

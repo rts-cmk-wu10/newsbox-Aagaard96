@@ -4,18 +4,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/391025a272.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
     <title>Newsbox - Settings</title>
 </head>
 
 <body>
 
-    
+    <header>
+        <nav>
+            <ul class="navList">
+                <li class="navList__item"><a class="navList__itemLink" href="index.html"><i
+                            class="fa-solid fa-chevron-left"></i></a></li>
+                <li class="navList__item">Newsbox Settings</li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <article class="settings">
+            <h3 class="settings__Mainheading">Manage <br><span class="settings__headingSpan">Categories</span></h3>
+            <div class="settings__Ctn">
+                <div class="settings__CtnForEach settings__CtnForEach--top">
+                    <span class="settings__heading">europe</span>
+                    <div class="settings__switch">
+                        <input id="settings__switchEurope" type="checkbox" class="switch__checkbox">
+                        <label for="settings__switchEurope" class="switch"></label>
+                    </div>
+                </div>
+                <div class="settings__CtnForEach">
+                    <span class="settings__heading">health</span>
+                    <div class="settings__switch">
+                        <input id="settings__switchHealth" type="checkbox" class="switch__checkbox">
+                        <label for="settings__switchHealth" class="switch"></label>
+                    </div>
+                </div>
+                <div class="settings__CtnForEach">
+                    <span class="settings__heading">sport</span>
+                    <div class="settings__switch">
+                        <input id="settings__switchSport" type="checkbox" class="switch__checkbox">
+                        <label for="settings__switchSport" class="switch"></label>
+                    </div>
+                </div>
+                <div class="settings__CtnForEach">
+                    <span class="settings__heading">business</span>
+                    <div class="settings__switch">
+                        <input id="settings__switchBusiness" type="checkbox" class="switch__checkbox">
+                        <label for="settings__switchBusiness" class="switch"></label>
+                    </div>
+                </div>
+                <div class="settings__CtnForEach settings__CtnForEach--bottom">
+                    <span class="settings__heading">travel</span>
+                    <div class="settings__switch">
+                        <input id="settings__switchTravel" type="checkbox" class="switch__checkbox">
+                        <label for="settings__switchTravel" class="switch"></label>
+                    </div>
+                </div>
+            </div>
 
+            <button class="settings__darkmode">toggle dark mode</button>
+        </article>
+    </main>
 </body>
 
 </html>
-
-
-<!-- <input id="switch" type="checkbox" class="switch__checkbox">
-	<label for="switch" class="switch"></label>  -->

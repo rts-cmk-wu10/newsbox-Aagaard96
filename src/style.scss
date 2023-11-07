@@ -1,3 +1,5 @@
+@use './scss/variables' as var;
+
 @use "./scss/variables";
 @use "./scss/reset";
 @use "./scss/searchfield";
@@ -5,11 +7,10 @@
 @use "./scss/health";
 @use "./scss/sport";
 @use "./scss/travel";
-@use "./scss/settingsButton";
+@use "./scss/settings";
+@use "./scss/settingsSwitch";
+@use "./scss/toggleDarkmode";
 
 body {
-    border: solid 1px black;
-    width: 400px;
-    height: 850px;
-    margin: 0 auto;
+    background-color: var.$white;
 }
