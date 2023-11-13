@@ -3,7 +3,7 @@
 .categories {
 
     .healthCtn,
-    .sportCtn,
+    .sportsCtn,
     .travelCtn,
     .businessCtn,
     .worldCtn {
@@ -39,7 +39,7 @@
             cursor: pointer;
             position: absolute;
             right: 0;
-        }   
+        }
 
         &__fetch {
             display: flex;
@@ -57,7 +57,12 @@
             height: 75px;
         }
 
+        &__apiLink {
+            text-decoration: none;
+        }
+
         &__apiHeading {
+            color: var.$drab;
             font-size: 1em;
             margin-bottom: 0.10em;
         }

@@ -18,10 +18,12 @@ export default async function apiKald() {
                 ARTICLE.classList.add("worldCtn__fetch")
                 ARTICLE.innerHTML = `
                 <img class="worldCtn__apiImg" src="${results.multimedia[2].url}" alt="${results.multimedia[2].caption}">
-                <div worldCtn__textCtn>
-                    <h2 class="worldCtn__apiHeading">${results.title}<h2>
-                    <p class="worldCtn__apiAbstract">${results.abstract}</p>
-                </div>
+                <a class="worldCtn__apiLink" href="${results.url}">
+                    <div worldCtn__textCtn>
+                        <h2 class="worldCtn__apiHeading">${results.title}<h2>
+                        <p class="worldCtn__apiAbstract">${results.abstract}</p>
+                    </div>
+                </a>
             `
                 WORLD_SECT.append(ARTICLE)
             })

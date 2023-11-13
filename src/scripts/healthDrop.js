@@ -5,8 +5,7 @@ let open = false
 
 
 DROPDOWN.addEventListener("click", function (event) {
-
-    event.target.classList.toggle("healthchevron")
+    event.target.classList.toggle("fa-chevron-right")
     event.target.classList.toggle("fa-chevron-down")
 
     if (open) {

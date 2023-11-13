@@ -1,6 +1,9 @@
 import "./style.scss"
 import "./scripts/worldDrop"
 import "./scripts/healthDrop"
+import "./scripts/sportDrop"
+import "./scripts/businessDrop"
+import "./scripts/travelDrop"
 
 
 import "./scripts/worldAPI"
