@@ -14,14 +14,13 @@
         border: none;
         padding: 1em;
         margin: 1em 1.5em;
-        border-radius: 3px;
     }
 
     &__button {
         position: absolute;
         border: none;
         place-self: center;
-        right: 10%;
+        right: 8%;
         background-color: var.$ice;
         color: var.$drab;
         cursor: pointer;
