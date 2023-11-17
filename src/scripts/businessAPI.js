@@ -1,7 +1,7 @@
 const KEY = "KsMM6ssh0kdJGeDQA34rW7XrhTs8uY3m"
 
 export default async function apiKald() {
-
+    if (!window.location.pathname.includes("index.html")) return // guard clause
     fetch(`https://api.nytimes.com/svc/topstories/v2/business.json?api-key=${KEY}`)
         .then(function (response) {
             if (response.status !== 200)
@@ -14,6 +14,7 @@ export default async function apiKald() {
             const BUSINESS_SECT = document.querySelector(".business__div")
 
             data.results.forEach(function (results) {
+                if (results.item_type != "Article") return // guard clause
                 const ARTICLE = document.createElement("article")
                 ARTICLE.classList.add("businessCtn__fetch")
                 ARTICLE.innerHTML = `

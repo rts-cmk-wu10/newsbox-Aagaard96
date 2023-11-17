@@ -1,14 +1,25 @@
 @use 'variables' as var;
 
+body {
+    --backgroundColor: #{var.$ice};
+    // --settings: #{var.$ice};
+    --backgroundContainer: #{var.$white};
+    --primaryText: #{var.$ice};
+    --buttonBackground: #{var.$slate};
+    --switchBackgroundOff: #{var.$onyx};
+    --switchBackgroundOn: #{var.$ice};
 
-.settings__darkmode {
-    margin: 0 auto;
-    padding: 1em .75em;
-    border-radius: 2em;
-    background-color: var.$ice;
-    border: solid 0.5px var.$drab;
-    color: var.$drab;
-    font-weight: light;
-    text-transform: uppercase;
-    cursor: pointer;
+}
+
+body.darkmode {
+    --backgroundColor: #{var.$drab};
+    --backgroundContainer: #{var.$slate};
+    --primaryText: #{var.$ice};
+    --buttonBackground: #{var.$slate};
+    --switchBackgroundOff: #{var.$onyx};
+    --switchBackgroundOn: #{var.$ice};
+}
+
+body {
+    background-color: var(--backgroundColor);
 }

@@ -20,11 +20,6 @@ DROPDOWN.addEventListener("click", function (event) {
         }
         open = true
     }
-
-
-
-
-
 })
 
 

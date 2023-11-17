@@ -1,4 +1,5 @@
 import "./style.scss"
+import "./scripts/toggleDarkmode"
 import "./scripts/worldDrop"
 import "./scripts/healthDrop"
 import "./scripts/sportDrop"
