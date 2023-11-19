@@ -1,25 +1,26 @@
 @use 'variables' as var;
 
 body {
-    --backgroundColor: #{var.$ice};
-    // --settings: #{var.$ice};
-    --backgroundContainer: #{var.$white};
-    --primaryText: #{var.$ice};
-    --buttonBackground: #{var.$slate};
-    --switchBackgroundOff: #{var.$onyx};
-    --switchBackgroundOn: #{var.$ice};
+    --primaryTextColor: #{var.$drab};
+    --secondaryTextColor: #{var.$fossil};
+    --primaryInteractive: #{var.$sage};
+    --iconColor: #{var.$rust};
+    --deleteItem: #{var.$danger};
+    --primaryBackgroundColor: #{var.$snow};
+    --secondaryBackgroundColor: #{var.$ice};
 
 }
 
 body.darkmode {
-    --backgroundColor: #{var.$drab};
-    --backgroundContainer: #{var.$slate};
-    --primaryText: #{var.$ice};
-    --buttonBackground: #{var.$slate};
-    --switchBackgroundOff: #{var.$onyx};
-    --switchBackgroundOn: #{var.$ice};
+    --primaryTextColor: #{var.$ice};
+    --secondaryTextColor: #{var.$fossil};
+    --primaryInteractive: #{var.$sage};
+    --iconColor: #{var.$rust};
+    --deleteItem: #{var.$danger};
+    --primaryBackgroundColor: #{var.$slate};
+    --secondaryBackgroundColor: #{var.$drab};
 }
 
 body {
-    background-color: var(--backgroundColor);
+    background-color: var(--primaryBackgroundColor);
 }

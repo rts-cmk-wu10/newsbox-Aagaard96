@@ -4,7 +4,7 @@
     display: block;
     height: 2em;
     width: 3.5em;
-    background-color: var(--switchBackgroundOff);
+    background-color: var(--secondaryBackgroundColor);
     border-radius: 1em;
     position: relative;
     transition: background-color 0.25s ease;
@@ -18,7 +18,7 @@
         height: 1.7em;
         width: 1.7em;
         border-radius: 50%;
-        background-color: var(--buttonBackground);
+        background-color: var(--primaryTextColor);
         transition: left 0.25s ease, background-color 0.25s ease;
 
     }
@@ -34,5 +34,5 @@
 }
 
 .switch__checkbox:checked+.switch {
-    background-color: var(--switchBackgroundOn);
+    background-color: var(--primaryInteractive);
 }

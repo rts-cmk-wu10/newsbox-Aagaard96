@@ -4,31 +4,31 @@
 .settings {
     display: flex;
     flex-direction: column;
-    // background-color: var(--settings);
+    background-color: var(--secondaryBackgroundColor);
 
     &__Mainheading {
         margin-top: 1em;
         text-align: center;
-        color: var.$sage;
+        color: var(--primaryInteractive);
         font-size: 35px;
         line-height: 0.85;
     }
 
     &__headingSpan {
-        color: var.$fossil;
+        color: var(--secondaryTextColor);
         font-size: 24px;
     }
 
     &__heading {
         text-transform: uppercase;
-        color: var(--primaryText);
+        color: var(--primaryTextColor);
     }
 
     &__Ctn {
         margin: 4em auto;
         border-radius: 20px;
         width: 350px;
-        background-color: var(--backgroundContainer);
+        background-color: var(--primaryBackgroundColor);
     }
 
     &__CtnForEach {
@@ -36,7 +36,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 1em;
-        border-bottom: solid 2px var.$fossil;
+        border-bottom: solid 1px var(--secondaryTextColor);
     }
 
     &__CtnForEach--bottom {

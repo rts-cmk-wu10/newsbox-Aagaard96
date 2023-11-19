@@ -5,9 +5,9 @@
     margin: 0 auto;
     padding: 1em .75em;
     border-radius: 2em;
-    background-color: var(--buttonBackground);
-    border: solid 0.5px var.$drab;
-    color: var(--primaryText);
+    background-color: var(--primaryBackgroundColor);
+    border: solid 0.5px var(--secondaryTextColor);
+    color: var(--primaryTextColor);
     font-weight: light;
     text-transform: uppercase;
     cursor: pointer;
