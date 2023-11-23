@@ -1,7 +1,7 @@
 const KEY = "KsMM6ssh0kdJGeDQA34rW7XrhTs8uY3m"
 
 export default async function apiKald() {
-    if (!window.location.pathname.includes("index.html")) return // guard clause
+    if (!window.location.pathname.includes("index") && window.location.pathname !== "/") return // guard clause
     fetch(`https://api.nytimes.com/svc/topstories/v2/health.json?api-key=${KEY}`)
         .then(function (response) {
             if (response.status !== 200)

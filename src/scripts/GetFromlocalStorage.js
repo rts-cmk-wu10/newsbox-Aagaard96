@@ -1,7 +1,7 @@
 // VIRKER IKKE!!!!!!!!!!!!!!
 
 export default function ToArchive() {
-    if (!window.location.pathname.includes("archive.html")) return; // guard clause
+    if (!window.location.pathname.includes("archive")) return; // guard clause
 
     const STORED_DATA = JSON.parse(localStorage.getItem("savedWorld"))
     const DESTINATION = document.querySelector(".world__div")
