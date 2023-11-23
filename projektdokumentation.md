@@ -8,7 +8,7 @@
 
 ##### Uddannelsessted: Roskilde Tekniske Skole
 
-[Link til (min applikaton)](http://aaanewsbox.netlify.app/)
+[](http://aaanewsbox.netlify.app/)
 
 
 ## Teknologier
