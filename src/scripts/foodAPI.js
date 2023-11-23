@@ -47,6 +47,9 @@ export default async function apiKald() {
                     SAVED_ARTICLES.push(results)
                     localStorage.setItem("savedFood", JSON.stringify(SAVED_ARTICLES))
                 }
+                setInterval( function(forsvind) {
+                    ARTICLE.style.display ="none"
+                }, 800);
             })
 
                 FOOD_SECT.append(ARTICLE)

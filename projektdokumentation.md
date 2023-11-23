@@ -31,12 +31,21 @@
 
 ### Argumentation for de valg du selvstændigt har truffet under løsningen af opgaven
 
-(Hvilke overvejelser har du gjort dig, fx. i forbindelse med dit valg af animationer)
+Jeg har f.eks. fjernet den swipede artikel ved hjælp af 'setInterval', som jeg er sikker på ikke er den korrekte måde at gøre det på, men det var sådan jeg kunne få det til at ske, hvis jeg stadig selv skulle kunne forstå det. 
 
 ---
 ### Vurdering af egen indsats & gennemførelse af opgaveforløbet (Arbejdsgangen)
+Jeg synes det gik godt med at opsætte HTML og CSS, det ligner designet ud fra billedet med små afvigelser.
+CSS kunne være mere overskueligt, men i takt med man hele tiden laver ændringer/retter fejl kan det pludselig godt virke uoverskueligt. 
 
-(Hvad gik godt. Hvor prioriterede du forkert. Klagesange fra de varme lande om halvfærdigt produkt, på grund af manglende nattesøvn, fordi din kæle-skildpadde havde tandpine er IKKE interessante.)
+Jeg har ud fra min bedste evne forsøgt at tilføje det relavante JS, men er ikke kommet i mål med alle funktioner. Årsag: Jeg er bare ikke god nok til det endnu, men det jeg har, kan jeg selv forstå. 
+
+Personligt har jeg synes at projektet var for omfattende, og derfor har jeg mod slutningen mistet fokus pga. jeg har løbet panden med muren. 
+(Kan også sagtens forstå omfanget af opgaven skal være større end det jeg allerede kan, så man kan fordybe sig yderligere)
+
+Tilfredshed: 6/10
+Lært noget?: 7/10
+Plads til forbedring?: 1000000/10
 
 ---
 ### En beskrivelse af særlige punkter til bedømmelse
