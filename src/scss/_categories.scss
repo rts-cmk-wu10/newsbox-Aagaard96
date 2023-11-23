@@ -3,7 +3,7 @@
 .categories {
 
     .healthCtn,
-    .sportsCtn,
+    .foodCtn,
     .travelCtn,
     .businessCtn,
     .worldCtn {
@@ -13,7 +13,7 @@
         align-items: center;
         gap: 1em;
         width: 100%;
-        border-bottom: solid 2px var(--secondaryTextColor);
+        border-bottom: solid 2px var(--primaryAccent);
 
         &__img {
             display: flex;
@@ -22,7 +22,8 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
-            box-shadow: 0px 3px 5px var(--primaryTextColor);
+            box-shadow: 0px 3px 5px var(--primaryAccent);
+            background-color: var(--primaryAccent);
             color: var(--iconColor);
             margin-left: 1.5em;
         }
@@ -42,19 +43,14 @@
         }
 
         &__fetch {
+            border-bottom: solid 2px var(--primaryBackgroundColor);
             display: flex;
-            gap: 1em;
-            justify-content: center;
-            align-items: center;
-            border-bottom: solid 2px var(--secondaryTextColor);
-            height: 125px;
-            padding: 0.5em 0;
         }
 
         &__apiImg {
             border-radius: 50%;
-            width: 75px;
-            height: 75px;
+            width: 70px;
+            height: 70px;
         }
 
         &__apiLink {
@@ -62,18 +58,57 @@
         }
 
         &__apiHeading {
-            color: var.$drab;
+            color: var(--primaryTextColor);
             font-size: 1em;
             margin-bottom: 0.10em;
         }
 
         &__apiAbstract {
-            font-size: 0.75em;
+            font-size: 0.55em;
             text-overflow: ellipsis;
             white-space: nowrap;
             overflow: hidden;
             width: 300px;
-            color: var(--primaryInteractive);
+            color: var(--secondaryTextColor);
         }
+    }
+}
+
+.swipe__ctn {
+    background-color: var(--primaryInteractive);
+    height: 124px;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    position: absolute;
+    width: 125px;
+    right: 0;
+    z-index: 5;
+    font-size: 2em;
+    color: var(--primaryBackgroundColor);
+    margin-top: 0.25px;
+}
+
+.article__container {
+    display: flex;
+    width: 100%;
+    height: 125px;
+    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-color: var(--secondaryBackgroundColor);
+    padding: 0 0.5em;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(0%);
+
+    }
+
+    100% {
+        transform: translateX(-125px);
     }
 }

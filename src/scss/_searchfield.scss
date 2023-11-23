@@ -2,12 +2,12 @@
 
 .searchField {
     position: relative;
-    border-bottom: solid 2px var(--secondaryTextColor);
+    border-bottom: solid 2px var(--primaryAccent);
     display: flex;
     justify-content: center;
 
     &__input {
-        background-color: var(--secondaryBackgroundColor);
+        background-color: var(--primaryAccent);
         width: 100%;
         height: 100%;
         display: block;

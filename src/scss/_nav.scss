@@ -8,7 +8,7 @@
     grid-template-columns: repeat(3, auto);
     list-style: none;
     justify-content: space-between;
-    border-bottom: solid 2px var(--secondaryTextColor);
+    border-bottom: solid 2px var(--primaryAccent);
     color: var(--primaryTextColor);
 
     &__itemLink {

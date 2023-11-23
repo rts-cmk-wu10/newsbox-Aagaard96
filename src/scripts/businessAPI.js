@@ -18,18 +18,42 @@ export default async function apiKald() {
                 const ARTICLE = document.createElement("article")
                 ARTICLE.classList.add("businessCtn__fetch")
                 ARTICLE.innerHTML = `
-                <img class="businessCtn__apiImg" src="${results.multimedia[2].url}" alt="${results.multimedia[2].caption}">
+                <div class="article__container">
+                <img class="businessCtn__apiImg" src="${results.multimedia[0].url}" alt="${results.multimedia[0].caption}">
                 <a class="businessCtn__apiLink" href="${results.url}">
-                <div businessCtn__textCtn>
-                    <h2 class="businessCtn__apiHeading">${results.title}<h2>
-                    <p class="businessCtn__apiAbstract">${results.abstract}</p>
-                </div>
+                    <div class="businessCtn__textCtn">
+                        <h2 class="businessCtn__apiHeading">${results.title}<h2>
+                        <p class="businessCtn__apiAbstract">${results.abstract}</p>
+                    </div>
                 </a>
+                </div>
+                <button class="swipe__ctn"><i class="fa-solid fa-inbox"></i></button>
             `
-               BUSINESS_SECT.append(ARTICLE)
+            let touchStartX = 0
+            let touchEndX = 0
+
+            ARTICLE.querySelector(".article__container").addEventListener("touchstart", function (e) {
+                touchStartX = e.touches[0].clientX
+            })
+
+            ARTICLE.querySelector(".article__container").addEventListener("touchend", function (e) {
+                touchEndX = e.changedTouches[0].clientX
+
+                if (touchEndX < touchStartX) {
+                    ARTICLE.querySelector(".article__container").style.animation = `moveLeft 1s ease`
+
+                    // Save the swiped article immediately to localStorage
+                    const SAVED_ARTICLES = JSON.parse(localStorage.getItem("savedBusiness")) || []
+                    SAVED_ARTICLES.push(results)
+                    localStorage.setItem("savedBusiness", JSON.stringify(SAVED_ARTICLES))
+                }
+            })
+
+                BUSINESS_SECT.append(ARTICLE)
             })
         })
         .catch(function (error) {
             console.log(error)
         })
+
 }

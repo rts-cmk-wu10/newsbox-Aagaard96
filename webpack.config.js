@@ -5,7 +5,7 @@ const path = require("path")
 
 module.exports = {
 	//mode: process.env.environment == "production" ? "production" : "development",
-	mode: "production",
+	mode: "development",
 	plugins: [new MiniCssExtractPlugin(), new HtmlWebpackPlugin({
 		template: path.resolve(__dirname, "src", "index.html")
 	}),
@@ -17,6 +17,12 @@ module.exports = {
 		template: path.resolve(__dirname, "src", "archive.html"),
 		filename: "archive.html",
 	})],
+
+	devServer: {
+		static: path.resolve(__dirname, 'src'),
+		port: 8080,
+		hot: true
+	},
 	module: {
 		rules: [
 			{

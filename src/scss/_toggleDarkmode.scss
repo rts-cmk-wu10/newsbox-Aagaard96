@@ -2,12 +2,13 @@
 
 body {
     --primaryTextColor: #{var.$drab};
-    --secondaryTextColor: #{var.$fossil};
+    --secondaryTextColor: #{var.$slate};
     --primaryInteractive: #{var.$sage};
     --iconColor: #{var.$rust};
     --deleteItem: #{var.$danger};
     --primaryBackgroundColor: #{var.$snow};
     --secondaryBackgroundColor: #{var.$ice};
+    --primaryAccent: #{var.$ice};
 
 }
 
@@ -17,8 +18,9 @@ body.darkmode {
     --primaryInteractive: #{var.$sage};
     --iconColor: #{var.$rust};
     --deleteItem: #{var.$danger};
-    --primaryBackgroundColor: #{var.$slate};
-    --secondaryBackgroundColor: #{var.$drab};
+    --primaryBackgroundColor: #{var.$drab};
+    --secondaryBackgroundColor: #{var.$slate};
+    --primaryAccent: #{var.$slate};
 }
 
 body {

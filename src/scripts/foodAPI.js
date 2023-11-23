@@ -2,7 +2,7 @@ const KEY = "KsMM6ssh0kdJGeDQA34rW7XrhTs8uY3m"
 
 export default async function apiKald() {
     if (!window.location.pathname.includes("index.html")) return // guard clause
-    fetch(`https://api.nytimes.com/svc/topstories/v2/travel.json?api-key=${KEY}`)
+    fetch(`https://api.nytimes.com/svc/topstories/v2/food.json?api-key=${KEY}`)
         .then(function (response) {
             if (response.status !== 200)
                 throw new Error("fejlbesked kig her")
@@ -11,19 +11,19 @@ export default async function apiKald() {
 
         .then(function (data) {
             console.log(data)
-            const TRAVEL_SECT = document.querySelector(".travel__div")
+            const FOOD_SECT = document.querySelector(".food__div")
 
             data.results.forEach(function (results) {
                 if (results.item_type != "Article") return // guard clause
                 const ARTICLE = document.createElement("article")
-                ARTICLE.classList.add("travelCtn__fetch")
+                ARTICLE.classList.add("foodCtn__fetch")
                 ARTICLE.innerHTML = `
                 <div class="article__container">
-                <img class="travelCtn__apiImg" src="${results.multimedia[0].url}" alt="${results.multimedia[0].caption}">
-                <a class="travelCtn__apiLink" href="${results.url}">
-                    <div class="travelCtn__textCtn">
-                        <h2 class="travelCtn__apiHeading">${results.title}<h2>
-                        <p class="travelCtn__apiAbstract">${results.abstract}</p>
+                <img class="foodCtn__apiImg" src="${results.multimedia[0].url}">
+                <a class="foodCtn__apiLink" href="${results.url}">
+                    <div class="foodCtn__textCtn">
+                        <h2 class="foodCtn__apiHeading">${results.title}<h2>
+                        <p class="foodCtn__apiAbstract">${results.abstract}</p>
                     </div>
                 </a>
                 </div>
@@ -42,20 +42,14 @@ export default async function apiKald() {
                 if (touchEndX < touchStartX) {
                     ARTICLE.querySelector(".article__container").style.animation = `moveLeft 1s ease`
 
-                    // Tjekker om den valte artikel er gemt i localstorage, eller om den er tom
-                    const SAVED_ARTICLES = JSON.parse(localStorage.getItem("savedTravel")) || []
-                    // Tilføjer valgte artikel til 
+                    // Save the swiped article immediately to localStorage
+                    const SAVED_ARTICLES = JSON.parse(localStorage.getItem("savedFood")) || []
                     SAVED_ARTICLES.push(results)
-                    // Gør elemented til string (det SKAl det være)
-                    localStorage.setItem("savedTravel", JSON.stringify(SAVED_ARTICLES))
-                    // Sætter en timer så det ligner den bliver slettet
-                    setInterval( function(forsvind) {
-                        ARTICLE.style.display ="none"
-                    }, 800);
+                    localStorage.setItem("savedFood", JSON.stringify(SAVED_ARTICLES))
                 }
             })
 
-                TRAVEL_SECT.append(ARTICLE)
+                FOOD_SECT.append(ARTICLE)
             })
         })
         .catch(function (error) {
