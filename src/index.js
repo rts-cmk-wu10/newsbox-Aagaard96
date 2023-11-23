@@ -1,5 +1,6 @@
 import "./style.scss"
 import "./scripts/toggleDarkmode"
+import "./scripts/GetFromlocalStorage"
 import "./scripts/worldDrop"
 import "./scripts/healthDrop"
 import "./scripts/foodDrop"
